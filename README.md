@@ -25,16 +25,13 @@ Acc처럼 어느 하나의 평가 지표에서 평가를 그치는 게 아니라
 
 **Solar**
 <br/>
- Solar는 Llama2에 DUS 방식을 추가한 모델이다. 최근 언어 모델의 크기가 커짐에 따라, 이들을 효율적으로 확장하는 것은 중요한 과제인데 DUS는 이러한 필요성에 대응하여 개발되었다.
-DUS는, 기존 모델의 층(layer)을 복제하여 모델의 깊이를 증가시키는 방식이라고 할 수 있다.
-기존 ‘Mixture of Experts (MoE)’ 방식과 달리, Train 및 Inference 프레임워크에 복잡한 변경을 요구하지 않는다. 
-<br/>
+ Solar는 Llama2에 DUS 방식을 추가한 모델이다. 최근 언어 모델의 크기가 커짐에 따라, 이들을 효율적으로 확장하는 것은 중요한 과제인데 DUS는 이러한 필요성에 대응하여 개발되었다. DUS는, 기존 모델의 층(layer)을 복제하여 모델의 깊이를 증가시키는 방식이라고 할 수 있다. 기존 ‘Mixture of Experts (MoE)’ 방식과 달리, Train 및 Inference 프레임워크에 복잡한 변경을 요구하지 않는다. <br/>
 DUS를 진행한 후, SOLAR 10.7B 모델에 대해 instruction tuning과 alignment tuning을 진행한다.<br/>
-< Instruction tuning ><br/>
+- Instruction tuning <br/>
 Instruction tuning 단계에서는 QA 포맷으로 모델이 instruction을 따르도록 하는 방식을 사용했다. 
 대부분 오픈소스 데이터를 사용했지만, 수리 능력을 향상하기 위해 mathQA 데이터도 활용하였다.
 <br/>
-< Alignment tuning ><br/>
+- Alignment tuning<br/>
 Instruction tuning된 모델에 대해 DPO(direct preference optimization) 학습을 수행하였다.
 이때 DPO는 기존의 강화 학습에서 요구되는 보상 모델링 단계를 건너뛰고 
 선호도 데이터를 직접 사용하여 언어 모델을 최적화하는 접근 방식이다. 
