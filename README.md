@@ -1,6 +1,6 @@
 # Paper-Model-Review
 
-**Microsoft-Phi2**
+**< Microsoft-Phi2 >**
 <br/>
 "Phi"는 마이크로소프트 회사에서 출시한 SLM(소형 언어 모델) 이다.
 Phi-2의 주요 인사이트는 두 가지이다.
@@ -23,7 +23,7 @@ Acc처럼 어느 하나의 평가 지표에서 평가를 그치는 게 아니라
 <br/>
 <br/>
 
-**Solar**
+**< Solar >**
 <br/>
  Solar는 Llama2에 DUS 방식을 추가한 모델이다. 최근 언어 모델의 크기가 커짐에 따라, 이들을 효율적으로 확장하는 것은 중요한 과제인데 DUS는 이러한 필요성에 대응하여 개발되었다. DUS는, 기존 모델의 층(layer)을 복제하여 모델의 깊이를 증가시키는 방식이라고 할 수 있다. 기존 ‘Mixture of Experts (MoE)’ 방식과 달리, Train 및 Inference 프레임워크에 복잡한 변경을 요구하지 않는다. <br/>
 DUS를 진행한 후, SOLAR 10.7B 모델에 대해 instruction tuning과 alignment tuning을 진행한다.<br/>
